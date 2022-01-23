@@ -2,6 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'review_build'),
+  },
   module: {
     rules: [
       {
@@ -9,7 +13,7 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /.css$/,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
@@ -19,7 +23,4 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  output: {
-    path: path.resolve(__dirname, 'review_build'),
-  },
 };
