@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Greeting from './Greeting';
+import Login from './Login.jsx';
+import Logout from './Logout.jsx';
 
 
 class Auth extends Component {
