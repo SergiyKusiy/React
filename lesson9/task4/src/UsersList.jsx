@@ -1,5 +1,6 @@
 import React from 'react';
 import Filter from './Filter.jsx';
+import User from './User.jsx';
 
 class UsersList extends React.Component {
   state = {
@@ -14,7 +15,8 @@ class UsersList extends React.Component {
   render() {
     const users = this.props.users.slice();
     const sortedUserList = users
-      .filter(user => user.name.toUpperCase().includes(this.state.value.toUpperCase()))
+        .filter(user => user.name.toLowerCase().includes(this.state.value.toLowerCase()))
+         .map (user => <User key={user.id} {...user} />)
     return (
       <div>
         <ul className="users">{sortedUserList}</ul>
