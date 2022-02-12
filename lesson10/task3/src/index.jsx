@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Game from './Game.jsx';
+import Calculator from './Calculator.jsx';
 
-ReactDOM.render(<Game />, document.getElementById('root'));
+const rootElement = document.querySelector('#root');
+
+ReactDOM.render(<Calculator />, rootElement);
