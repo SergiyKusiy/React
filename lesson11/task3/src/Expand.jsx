@@ -15,7 +15,7 @@ class Expand extends Component {
       return (
          <div className="expand border">
             <div className='expand__header'>
-               <span expand__title>{this.props.title}</span>
+               <span className="expand__title">{this.props.title}</span>
                <button onClick={this.toggleBtn} className="expand__toggle-btn">
                   {this.state.isHide
                      ? <i className="fas fa-chevron-up">-</i>
